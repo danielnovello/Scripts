@@ -19,7 +19,7 @@ if sudo grep -q "# %wheel\tALL=(ALL) NOPASSWD: ALL" "/etc/sudoers"; then
       sed --version 2>&1 > /dev/null
       if [[ $? == 0 ]];then
           sudo sed -i 's/^#\s*\(%wheel\s\+ALL=(ALL)\s\+NOPASSWD:\s\+ALL\)/\1/' /etc/sudoers
-      else
+      elif
           sudo sed -i '' 's/^#\s*\(%wheel\s\+ALL=(ALL)\s\+NOPASSWD:\s\+ALL\)/\1/' /etc/sudoers
       fi
       sudo dscl . append /Groups/wheel GroupMembership $(whoami)
@@ -91,7 +91,7 @@ echo "Showing Date on menubar..."
 defaults write com.apple.menuextra.clock.plist DateFormat "EEE dd MMM  h:mm:ss a"
 killall "SystemUIServer";
 
-else
+elif
   echo "Done makng system changes"
 fi
 
@@ -112,7 +112,7 @@ if [ "$CONT" == "y" ]; then
        hdiutil unmount /Volumes/Malwarebytes\ Anti-Malware/
        rm MBAM-Mac-1.1.3.72.dmg
        echo "Malwarebytes Anti-Malware Installed successfully";
-else
+elif
   echo "Ok, next..."
 fi
 
@@ -126,7 +126,7 @@ if [ "$CONT" == "y" ]; then
      hdiutil unmount "/Volumes/vlc"
      rm vlc.dmg
        echo "VLC Player Installed successfully";
-else
+elif
   echo "Ok, next..."
 fi
 
@@ -139,7 +139,7 @@ if [ "$CONT" == "y" ]; then
      hdiutil unmount "/Volumes/javaforosx"
      rm javaforosx.dmg
        echo "Java for OSX Installed successfully";
-else
+elif
   echo "Ok, next..."
 fi
 
@@ -150,7 +150,7 @@ if [ "$CONT" == "y" ]; then
      sudo installer -verbose -pkg AdobeFlashPlayer.pkg -target /
      rm AdobeFlashPlayer.pkg
        echo "Flash for OSX Installed successfully";
-else
+elif
   echo "Ok, next..."
 fi
 
@@ -165,7 +165,7 @@ if [ "$CONT" == "y" ]; then
      hdiutil unmount "/Volumes/Skype"
      rm skype.dmg
        echo "Skype Installed successfully";
-else
+elif
   echo "Ok, next..."
 fi
 
@@ -178,7 +178,7 @@ if [ "$CONT" == "y" ]; then
      hdiutil unmount "/Volumes/chrome"
      rm chrome.dmg
        echo "Google Chrome Installed successfully";
-else
+elif
   echo "Ok, next..."
 fi
 
@@ -191,7 +191,7 @@ if [ "$CONT" == "y" ]; then
      hdiutil unmount "/Volumes/firefox"
      rm firefox.dmg
        echo "Firefox Installed successfully";
-else
+elif
   echo "Ok, next..."
 fi
 
@@ -206,11 +206,11 @@ if [ "$CONT" == "y" ]; then
      rm googledrive.dmg
      open /Applications/Google\ Drive.app 
        echo "Google Drive Installed successfully";
-else
+elif
   echo "Ok, next..."
 fi
 
-else
+elif
   echo "Done Installing Applications and Utilities"
 fi
 
@@ -224,7 +224,7 @@ fi
 # Remove All Caches
    sudo softwareupdate -i -a
     echo "Running Apple Updates (Restart is required)...";
-else
+elif
   echo "Done. Note that some of these changes require a logout/restart to take effect."
 fi
 
@@ -250,7 +250,7 @@ fi
    sudo atsutil server -ping
    sudo rm -rf /var/folders/*
    echo "Running Font Maintenance (Restart is required)...";
-else
+elif
   echo "Done. Note that some of these changes require a logout/restart to take effect."
 fi
 
@@ -264,7 +264,7 @@ fi
 # Remove All Caches
    echo "Restarting..."
    sudo shutdown -r now
-else
+elif
   echo "Done. Note that some of these changes require a logout/restart to take effect."
 fi
 
