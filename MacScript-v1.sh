@@ -90,7 +90,6 @@ sudo nvram boot-args="mbasd=1"
 echo "Showing Date on menubar..."
 defaults write com.apple.menuextra.clock.plist DateFormat "EEE dd MMM  h:mm:ss a"
 killall "SystemUIServer";
-
 elif
   echo "Done makng system changes"
 fi
