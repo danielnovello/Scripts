@@ -90,6 +90,9 @@ sudo nvram boot-args="mbasd=1"
 echo "Showing Date on menubar..."
 defaults write com.apple.menuextra.clock.plist DateFormat "EEE dd MMM  h:mm:ss a"
 killall "SystemUIServer";
+# Disable reopen apps on login
+echo "Disabling reopen apps on login..."
+defaults write com.apple.loginwindow TALLogoutSavesState -bool false
 
 else
   echo "Done makng system changes"
@@ -200,7 +203,7 @@ if [ "$CONT" == "y" ]; then
   sudo rm -rf /Applications/Google\ Drive.app
   echo "Installing Google Drive..."
      curl -L -o googledrive.dmg "https://dl-ssl.google.com/drive/installgoogledrive.dmg"
-     hdiutil mount -nobrowse /Users/daniel/Desktop/googledrive.dmg  -mountpoint /Volumes/googledrive
+     hdiutil mount -nobrowse googledrive.dmg  -mountpoint /Volumes/googledrive
      sudo cp -R "/Volumes/googledrive/Google Drive.app" /Applications
      hdiutil unmount "/Volumes/googledrive"
      rm googledrive.dmg
