@@ -36,7 +36,7 @@ read -p "Would You Like to make system changes? (Finder, etc...) ? (y/n)?" CONT
 if [ "$CONT" == "y" ]; then
 sleep 3
 # Keep-alive: update existing `sudo` time stamp until `MacScriptV1.sh` has finished
-echo "Keep this mac alive while ding this task..."
+echo "Keep this mac alive while doing this task..."
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 sleep 3
 # Set standby delay to 24 hours (default is 1 hour)
