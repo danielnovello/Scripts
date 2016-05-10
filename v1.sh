@@ -93,6 +93,16 @@ killall "SystemUIServer";
 # Disable reopen apps on login
 echo "Disabling reopen apps on login..."
 defaults write com.apple.loginwindow TALLogoutSavesState -bool false
+# Show the ~/Library folder
+echo "Showing the ~/Library folder..."
+chflags nohidden ~/Library
+# Expand the following File Info panes:
+# “General”, “Open with”, and “Sharing & Permissions”
+echo "Expand the following File Info panes: General, Open with, and Sharing & Permissions..." 
+defaults write com.apple.finder FXInfoPanesExpanded -dict \
+	General -bool true \
+	OpenWith -bool true \
+	Privileges -bool true
 
 else
   echo "Done makng system changes"
