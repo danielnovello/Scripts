@@ -120,6 +120,7 @@ read -p "Would You Like to Install Malwarebytes Anti-Malware ? (y/n)?" CONT
 if [ "$CONT" == "y" ]; then
   echo "Installing Malwarebytes Anti-Malware..."
        curl -O https://data-cdn.mbamupdates.com/web/MBAM-Mac-1.1.3.72.dmg
+       sudo rm -rf /Applications/Malwarebytes\ Anti-Malware.app
        hdiutil attach MBAM-Mac-1.1.3.72.dmg
        sudo cp -R /Volumes/Malwarebytes\ Anti-Malware/Malwarebytes\ Anti-Malware.app /Applications/
        hdiutil unmount /Volumes/Malwarebytes\ Anti-Malware/
