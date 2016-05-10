@@ -42,7 +42,6 @@ sleep 3
 # Set standby delay to 24 hours (default is 1 hour)
 echo "Setting Standby Delay to 24 hours..."
 sudo pmset -a standbydelay 86400
-sleep 3
 # Always show scrollbars
 echo "Changing Finder Always show scrollbars..."
 defaults write NSGlobalDomain AppleShowScrollBars -string "Always"
