@@ -143,6 +143,7 @@ read -p "Would You Like to Install Malwarebytes Anti-Malware ? (y/n)?" CONT
 if [ "$CONT" == "y" ]; then
   echo "Installing Malwarebytes Anti-Malware..."
        curl -O https://data-cdn.mbamupdates.com/web/MBAM-Mac-1.1.3.72.dmg
+  echo "Removing old version of Malwarebytes Anti-Malware..."
        sudo rm -rf /Applications/Malwarebytes\ Anti-Malware.app
        hdiutil attach MBAM-Mac-1.1.3.72.dmg
        sudo cp -R /Volumes/Malwarebytes\ Anti-Malware/Malwarebytes\ Anti-Malware.app /Applications/
@@ -158,6 +159,7 @@ read -p "Would You Like to Install VLC Player ? (y/n)?" CONT
 if [ "$CONT" == "y" ]; then
   echo "Installing VLC Player..."
      curl -L -o vlc.dmg "http://get.videolan.org/vlc/2.2.1/macosx/vlc-2.2.1.dmg"
+  echo "Removing old version of VLC Player..."
      sudo rm -rf /Applications/VLC.app
      hdiutil mount -nobrowse vlc.dmg -mountpoint /Volumes/vlc
      sudo cp -R "/Volumes/vlc/VLC.app" /Applications
@@ -215,6 +217,8 @@ read -p "Would You Like to Google Chrome ? (y/n)?" CONT
 if [ "$CONT" == "y" ]; then
   echo "Installing Google Chrome..."
      curl -L -o chrome.dmg "https://dl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg"
+  echo "Removing of version of Google Chrome..." 
+     sudo rm -rf /Applications/Google\ Chrome.app
      hdiutil mount -nobrowse chrome.dmg -mountpoint /Volumes/chrome
      sudo cp -R "/Volumes/chrome/Google\ Chrome.app" /Applications
      hdiutil unmount "/Volumes/chrome"
@@ -229,6 +233,8 @@ read -p "Would You Like to Install Firefox ? (y/n)?" CONT
 if [ "$CONT" == "y" ]; then
   echo "Installing Firefox..."
      curl -L -o firefox.dmg "http://download.mozilla.org/?product=firefox-latest&os=osx&lang=en-US"
+  echo "Removing of version of Firefox..." 
+     sudo rm -rf /Applications/Firefox.app   
      hdiutil mount -nobrowse firefox.dmg -mountpoint /Volumes/firefox
      sudo cp -R "/Volumes/firefox/Firefox.app" /Applications
      hdiutil unmount "/Volumes/firefox"
@@ -244,6 +250,8 @@ if [ "$CONT" == "y" ]; then
   sudo rm -rf /Applications/Google\ Drive.app
   echo "Installing Google Drive..."
      curl -L -o googledrive.dmg "https://dl-ssl.google.com/drive/installgoogledrive.dmg"
+  echo "Removing of version of Google Drive..." 
+     sudo rm -rf /Applications/Google Drive.app  
      hdiutil mount -nobrowse googledrive.dmg  -mountpoint /Volumes/googledrive
      sudo cp -R "/Volumes/googledrive/Google Drive.app" /Applications
      hdiutil unmount "/Volumes/googledrive"
