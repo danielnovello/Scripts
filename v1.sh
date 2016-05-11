@@ -347,9 +347,11 @@ printf '%60s\n' | tr ' ' -
 else
 printf '%60s\n' | tr ' ' -
 printf '%60s\n' | tr ' ' -
-  echo "Done. Note that some of these changes require a logout/restart to take effect."
 printf '%60s\n' | tr ' ' -
 printf '%60s\n' | tr ' ' -  
+printf '%60s\n' | tr ' ' -
+printf '%60s\n' | tr ' ' - 
+  echo "Done. Note that some of these changes require a logout/restart to take effect."
 fi
 
 
