@@ -34,51 +34,51 @@ fi
 # Ask to make system changes
 read -p "Would You Like to make system changes? (Finder, etc...) ? (y/n)?" CONT
 if [ "$CONT" == "y" ]; then
-sleep 3
+sleep 1
 # Keep-alive: update existing `sudo` time stamp until `MacScriptV1.sh` has finished
 echo "Keep this mac alive while doing this task..."
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
-sleep 3
+sleep 1
 # Set standby delay to 24 hours (default is 1 hour)
 echo "Setting Standby Delay to 24 hours..."
 sudo pmset -a standbydelay 86400
 # Always show scrollbars
 echo "Changing Finder Always show scrollbars..."
 defaults write NSGlobalDomain AppleShowScrollBars -string "Always"
-sleep 3
+sleep 1
 # Expand save panel by default
 echo "Changing Finder Always expand save panel..."
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
-sleep 3
+sleep 1
 # Expand print panel by default
 echo "Changing Finder Always expand print panel..."
 defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
 defaults write NSGlobalDomain PMPrintingExpandedStateForPrint2 -bool true
-sleep 3
+sleep 1
 # Save to disk (not to iCloud) by default
 echo "Changing Finder Always save to disk..."
 defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
-sleep 3
+sleep 1
 # Disable the “Are you sure you want to open this application?” dialog
 echo "Disabling Application confirmation dialog..."
 defaults write com.apple.LaunchServices LSQuarantine -bool false
-sleep 3
+sleep 1
 # Reveal IP address, hostname, OS version, etc. when clicking the clock in the login window
 echo "Showing login window extra's (IP)..."
 sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
-sleep 3
+sleep 1
 # Restart automatically if the computer freezes
 echo "Turning on Restart if system freezes..."
 sudo systemsetup -setrestartfreeze on
-sleep 3
+sleep 1
 # Never go into computer sleep mode
 sudo systemsetup -setcomputersleep Off > /dev/null
-sleep 3
+sleep 1
 # Check for software updates daily, not just once per week
 echo "Check for Apple updates once a day..."
 defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
-sleep 3
+sleep 1
 # Show icons for hard drives, servers, and removable media on the desktop
 echo "Making Some Finder Changes..."
 defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
@@ -93,24 +93,24 @@ defaults write com.apple.finder ShowPathbar -bool true
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
 # Enable AirDrop over Ethernet and on unsupported Macs running Lion
 defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
-sleep 3
+sleep 1
 # Enable the MacBook Air SuperDrive on any Mac
 echo "Running Enable the MacBook Air SuperDrive on any Mac..."
 sudo nvram boot-args="mbasd=1"
-sleep 3
+sleep 1
 # Show Date on menubar
 echo "Showing Date on menubar..."
 defaults write com.apple.menuextra.clock.plist DateFormat "EEE dd MMM  h:mm:ss a"
 killall "SystemUIServer";
-sleep 3
+sleep 1
 # Disable reopen apps on login
 echo "Disabling reopen apps on login..."
 defaults write com.apple.loginwindow TALLogoutSavesState -bool false
-sleep 3
+sleep 1
 # Show the ~/Library folder
 echo "Showing the ~/Library folder..."
 chflags nohidden ~/Library
-sleep 3
+sleep 1
 # Expand the following File Info panes:
 # “General”, “Open with”, and “Sharing & Permissions”
 echo "Expand the following File Info panes: General, Open with, and Sharing & Permissions..." 
@@ -144,7 +144,7 @@ if [ "$CONT" == "y" ]; then
 else
   echo "Ok, next..."
 fi
-sleep 3
+sleep 1
 read -p "Would You Like to Install VLC Player ? (y/n)?" CONT
 if [ "$CONT" == "y" ]; then
   echo "Installing VLC Player..."
@@ -158,7 +158,7 @@ if [ "$CONT" == "y" ]; then
 else
   echo "Ok, next..."
 fi
-sleep 3
+sleep 1
 read -p "Would You Like to Java for OSX (Apple) ? (y/n)?" CONT
 if [ "$CONT" == "y" ]; then
   echo "Java for OSX..."
@@ -171,7 +171,7 @@ if [ "$CONT" == "y" ]; then
 else
   echo "Ok, next..."
 fi
-sleep 3
+sleep 1
 read -p "Would You Like to Flash for OSX ? (y/n)?" CONT
 if [ "$CONT" == "y" ]; then
   echo "Installing Flash for OSX..."
@@ -182,7 +182,7 @@ if [ "$CONT" == "y" ]; then
 else
   echo "Ok, next..."
 fi
-sleep 3
+sleep 1
 read -p "Would You Like to Install Skype ? (y/n)?" CONT
 if [ "$CONT" == "y" ]; then
   echo "Removing old version of Skype..."
@@ -197,7 +197,7 @@ if [ "$CONT" == "y" ]; then
 else
   echo "Ok, next..."
 fi
-sleep 3
+sleep 1
 read -p "Would You Like to Google Chrome ? (y/n)?" CONT
 if [ "$CONT" == "y" ]; then
   echo "Installing Google Chrome..."
@@ -210,7 +210,7 @@ if [ "$CONT" == "y" ]; then
 else
   echo "Ok, next..."
 fi
-sleep 3
+sleep 1
 read -p "Would You Like to Install Firefox ? (y/n)?" CONT
 if [ "$CONT" == "y" ]; then
   echo "Installing Firefox..."
@@ -223,7 +223,7 @@ if [ "$CONT" == "y" ]; then
 else
   echo "Ok, next..."
 fi
-sleep 3
+sleep 1
 read -p "Would You Like to Install Google Drive ? (y/n)?" CONT
 if [ "$CONT" == "y" ]; then
   sudo rm -rf /Applications/Google\ Drive.app
@@ -238,7 +238,7 @@ if [ "$CONT" == "y" ]; then
 else
   echo "Ok, next..."
 fi
-sleep 3
+sleep 1
 else
   echo "Done Installing Applications and Utilities"
 fi
@@ -246,7 +246,7 @@ fi
 #########################
 #Mac Updates#############
 #########################
-sleep 3
+sleep 1
 # Ask to Apple Updates
    read -p "Would You Like to run Apple Updates? (y/n)?" CONT
    if [ "$CONT" == "y" ]; then
@@ -260,7 +260,7 @@ fi
 #########################
 #Mac Maintenance#########
 #########################
-sleep 3
+sleep 1
 # Ask to run Mainrenance
    read -p "Would You Like to run Maintenance? (y/n)?" CONT
    if [ "$CONT" == "y" ]; then
@@ -282,7 +282,7 @@ sleep 3
 else
   echo "Done. Note that some of these changes require a logout/restart to take effect."
 fi
-sleep 3
+sleep 1
 #########################
 #Repair Permissions?#########
 #########################
@@ -296,7 +296,7 @@ sleep 3
 else
   echo "Ok, next..."
 fi
-sleep 3
+sleep 1
 #########################
 #Restart?#########
 #########################
