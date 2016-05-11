@@ -4,6 +4,9 @@
 #########################
 #Do you have permission?#
 #########################
+printf '%60s\n' | tr ' ' -
+echo "Checking for correct permission"
+printf '%60s\n' | tr ' ' -
 
 # Ask for the administrator password upfront
 echo "checking sudo state..."
@@ -30,6 +33,9 @@ fi
 #########################
 #System Changes##########
 #########################
+printf '%60s\n' | tr ' ' -
+echo "System Changes"
+printf '%60s\n' | tr ' ' -
 
 # Ask to make system changes
 read -p "Would You Like to make system changes? (Finder, etc...) ? (y/n)?" CONT
@@ -126,6 +132,9 @@ fi
 #########################
 #App and utility Install#
 #########################
+printf '%60s\n' | tr ' ' -
+echo "Application and utility Install"
+printf '%60s\n' | tr ' ' -
 
 # Ask to Install Applications and Utilities
 read -p "Would You Like to Install Applications and Utilities ? (y/n)?" CONT
@@ -144,6 +153,7 @@ if [ "$CONT" == "y" ]; then
 else
   echo "Ok, next..."
 fi
+printf '%60s\n' | tr ' ' -
 sleep 1
 read -p "Would You Like to Install VLC Player ? (y/n)?" CONT
 if [ "$CONT" == "y" ]; then
@@ -158,6 +168,7 @@ if [ "$CONT" == "y" ]; then
 else
   echo "Ok, next..."
 fi
+printf '%60s\n' | tr ' ' -
 sleep 1
 read -p "Would You Like to Java for OSX (Apple) ? (y/n)?" CONT
 if [ "$CONT" == "y" ]; then
@@ -171,6 +182,7 @@ if [ "$CONT" == "y" ]; then
 else
   echo "Ok, next..."
 fi
+printf '%60s\n' | tr ' ' -
 sleep 1
 read -p "Would You Like to Flash for OSX ? (y/n)?" CONT
 if [ "$CONT" == "y" ]; then
@@ -182,6 +194,7 @@ if [ "$CONT" == "y" ]; then
 else
   echo "Ok, next..."
 fi
+printf '%60s\n' | tr ' ' -
 sleep 1
 read -p "Would You Like to Install Skype ? (y/n)?" CONT
 if [ "$CONT" == "y" ]; then
@@ -197,6 +210,7 @@ if [ "$CONT" == "y" ]; then
 else
   echo "Ok, next..."
 fi
+printf '%60s\n' | tr ' ' -
 sleep 1
 read -p "Would You Like to Google Chrome ? (y/n)?" CONT
 if [ "$CONT" == "y" ]; then
@@ -210,6 +224,7 @@ if [ "$CONT" == "y" ]; then
 else
   echo "Ok, next..."
 fi
+printf '%60s\n' | tr ' ' -
 sleep 1
 read -p "Would You Like to Install Firefox ? (y/n)?" CONT
 if [ "$CONT" == "y" ]; then
@@ -223,6 +238,7 @@ if [ "$CONT" == "y" ]; then
 else
   echo "Ok, next..."
 fi
+printf '%60s\n' | tr ' ' -
 sleep 1
 read -p "Would You Like to Install Google Drive ? (y/n)?" CONT
 if [ "$CONT" == "y" ]; then
@@ -246,6 +262,10 @@ fi
 #########################
 #Mac Updates#############
 #########################
+printf '%60s\n' | tr ' ' -
+echo "Mac Updates"
+printf '%60s\n' | tr ' ' -
+
 sleep 1
 # Ask to Apple Updates
    read -p "Would You Like to run Apple Updates? (y/n)?" CONT
@@ -260,6 +280,10 @@ fi
 #########################
 #Mac Maintenance#########
 #########################
+printf '%60s\n' | tr ' ' -
+echo "Mac Maintenance"
+printf '%60s\n' | tr ' ' -
+
 sleep 1
 # Ask to run Mainrenance
    read -p "Would You Like to run Maintenance? (y/n)?" CONT
@@ -273,12 +297,12 @@ sleep 1
 # Turn Off Open windows after login
    defaults write com.apple.loginwindow TALLogoutSavesState 0
 # Font Maintenance
+   echo "Running Font Maintenance (Restart is required)...";
    atsutil databases -removeUser
    sudo atsutil databases -remove
    sudo atsutil server -shutdown
    sudo atsutil server -ping
    sudo rm -rf /var/folders/*
-   echo "Running Font Maintenance (Restart is required)...";
 else
   echo "Done. Note that some of these changes require a logout/restart to take effect."
 fi
@@ -286,9 +310,12 @@ sleep 1
 #########################
 #Repair Permissions?#########
 #########################
+printf '%60s\n' | tr ' ' -
+echo "Repair Permissions"
+printf '%60s\n' | tr ' ' -
 
 # Ask to Repair Permissions
-   read -p "Would You Like to Repair Permissions? (El Capitan Only) (y/n)?" CONT
+   read -p "Would You Like to Repair Permissions? (y/n)?" CONT
    if [ "$CONT" == "y" ]; then
 # Repair Permissions
    echo "Repairing Permissions..."
@@ -300,6 +327,9 @@ sleep 1
 #########################
 #Restart?#########
 #########################
+printf '%60s\n' | tr ' ' -
+echo "Complete. Please restart"
+printf '%60s\n' | tr ' ' -
 
 # Ask to Restart
    read -p "Would You Like to restart? (y/n)?" CONT
