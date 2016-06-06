@@ -219,8 +219,8 @@ if [ "$CONT" == "y" ]; then
      curl -L -o googlechrome.dmg "https://dl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg"
   echo "Removing of version of Google Chrome..." 
      sudo rm -rf /Applications/Google\ Chrome.app
-     hdiutil mount -nobrowse googlechrome.dmg -mountpoint /Volumes/googlechrome
-     sudo cp -R "/Volumes/googlechrome/Google\ Chrome.app" /Applications
+     hdiutil mount -nobrowse chrome.dmg -mountpoint /Volumes/chrome
+     sudo cp -R "/Volumes/googlechrome/Google Chrome.app" /Applications
      hdiutil unmount "/Volumes/googlechrome"
      rm googlechrome.dmg
        echo "Google Chrome Installed successfully";
