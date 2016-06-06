@@ -216,13 +216,13 @@ sleep 1
 read -p "Would You Like to Google Chrome ? (y/n)?" CONT
 if [ "$CONT" == "y" ]; then
   echo "Installing Google Chrome..."
-     curl -L -o chrome.dmg "https://dl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg"
+     curl -L -o googlechrome.dmg "https://dl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg"
   echo "Removing of version of Google Chrome..." 
      sudo rm -rf /Applications/Google\ Chrome.app
-     hdiutil mount -nobrowse chrome.dmg -mountpoint /Volumes/chrome
-     sudo cp -R "/Volumes/chrome/Google\ Chrome.app" /Applications
-     hdiutil unmount "/Volumes/chrome"
-     rm chrome.dmg
+     hdiutil mount -nobrowse googlechrome.dmg -mountpoint /Volumes/googlechrome
+     sudo cp -R "/Volumes/googlechrome/Google\ Chrome.app" /Applications
+     hdiutil unmount "/Volumes/googlechrome"
+     rm googlechrome.dmg
        echo "Google Chrome Installed successfully";
 else
   echo "Ok, next..."
@@ -247,7 +247,6 @@ printf '%60s\n' | tr ' ' -
 sleep 1
 read -p "Would You Like to Install Google Drive ? (y/n)?" CONT
 if [ "$CONT" == "y" ]; then
-  sudo rm -rf /Applications/Google\ Drive.app
   echo "Installing Google Drive..."
      curl -L -o googledrive.dmg "https://dl-ssl.google.com/drive/installgoogledrive.dmg"
   echo "Removing of version of Google Drive..." 
