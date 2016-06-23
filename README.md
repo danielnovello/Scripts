@@ -1,9 +1,10 @@
 Scripts
 =======
-Font Cleaner -  download, chmod u+x to make it executable
 
+Run in terminal:
 
-or run in terminal:
+Master
+bash <(curl -Ls https://raw.githubusercontent.com/djquazzi/Scripts/master/v1.sh)
 
-sudo curl -s https://raw.githubusercontent.com/djquazzi/Scripts/master/MacOSXFontCleaner.sh | sh                                 
-sudo curl -s https://raw.githubusercontent.com/djquazzi/Scripts/master/yosemitecachefix.sh | sh
+Adobe Flash Player (22.0.0.192)
+bash <(curl -Ls https://raw.githubusercontent.com/djquazzi/Scripts/master/InstallAdobeFlashPlayer.sh)
