@@ -1,7 +1,7 @@
 Scripts
 =======
 
-Updates, maintenacne, etc...
+Updates, maintenance, etc...
 
 
 Run in terminal:
