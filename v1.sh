@@ -179,8 +179,8 @@ if [ "$CONT" == "y" ]; then
      sudo rm -rf /Applications/EtreCheck.app
      unzip EtreCheck.zip
      sudo cp -R "EtreCheck.app" /Applications
-     rm EtreCheck.zip
-     rm EtreCheck.app
+     sudo rm -rf rm EtreCheck.zip
+     sudo rm -rf rm EtreCheck.app
        echo "EtreCheck Installed successfully";
 else
   echo "Ok, next..."
@@ -206,7 +206,7 @@ if [ "$CONT" == "y" ]; then
   echo "Installing Flash for OSX..."
      sudo curl -O https://raw.githubusercontent.com/djquazzi/Scripts/master/AdobeFlashPlayer.pkg
      sudo installer -verbose -pkg AdobeFlashPlayer.pkg -target /
-     rm AdobeFlashPlayer.pkg
+     sudo rm -rf rm AdobeFlashPlayer.pkg
        echo "Flash for OSX Installed successfully";
 else
   echo "Ok, next..."
