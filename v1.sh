@@ -171,6 +171,21 @@ else
 fi
 printf '%60s\n' | tr ' ' -
 sleep 1
+read -p "Would You Like to EtreCheck ? (y/n)?" CONT
+if [ "$CONT" == "y" ]; then
+  echo "Installing EtreCheck..."
+     curl -L -o EtreCheck.zip "https://etrecheck.com/download/EtreCheck.zip"
+  echo "Removing old version of EtreCheck..."
+     sudo rm -rf /Applications/EtreCheck.app
+     unzip EtreCheck.zip
+     sudo cp -R "EtreCheck.app" /Applications
+     rm EtreCheck.zip
+       echo "EtreCheck Installed successfully";
+else
+  echo "Ok, next..."
+fi
+printf '%60s\n' | tr ' ' -
+sleep 1
 read -p "Would You Like to Java for OSX (Apple) ? (y/n)?" CONT
 if [ "$CONT" == "y" ]; then
   echo "Java for OSX..."
