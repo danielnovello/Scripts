@@ -206,7 +206,7 @@ if [ "$CONT" == "y" ]; then
   echo "Installing Flash for OSX..."
      sudo curl -O https://raw.githubusercontent.com/djquazzi/Scripts/master/AdobeFlashPlayer.pkg
      sudo installer -verbose -pkg AdobeFlashPlayer.pkg -target /
-     sudo rm -rf rm AdobeFlashPlayer.pkg
+     sudo rm -rf AdobeFlashPlayer.pkg
        echo "Flash for OSX Installed successfully";
 else
   echo "Ok, next..."
