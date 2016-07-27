@@ -10,6 +10,6 @@ Master
 ------
 bash <(curl -Ls https://raw.githubusercontent.com/djquazzi/Scripts/master/v1.sh)
 
-Adobe Flash Player (22.0.0.192)
+Adobe Flash Player (22.0.0.209)
 ------
 bash <(curl -Ls https://raw.githubusercontent.com/djquazzi/Scripts/master/InstallAdobeFlashPlayer.sh)
