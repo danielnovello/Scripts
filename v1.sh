@@ -180,6 +180,7 @@ if [ "$CONT" == "y" ]; then
      unzip EtreCheck.zip
      sudo cp -R "EtreCheck.app" /Applications
      rm EtreCheck.zip
+     rm EtreCheck.app
        echo "EtreCheck Installed successfully";
 else
   echo "Ok, next..."
