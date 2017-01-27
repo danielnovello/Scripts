@@ -1,4 +1,24 @@
 #/bin/bash
+echo ""
+echo ""
+printf '%60s\n' | tr ' ' -
+echo "Please make sure you understand what this script does and how to execute it!"
+echo "System Requirement is Mac OSX Server 10.8 and above"
+printf '%60s\n' | tr ' ' -
+echo ""
+echo ""
+echo "This is what it going to happen:"
+echo "1. Select if running script for the first time, or skip and run the Adobe Update Tool."
+echo "2. Autenticate as root. (Nothing destructive)"
+echo "3. List some information about this machine."
+echo "4. Download and copy all the relevant abobe tools to this machine"
+echo "5. Create and Adobe VirtualHost website on port :1234"
+echo "6. Fix Permissions"
+echo "7. Restart We services"
+echo "8. Select Adobe Update options (fresh, incremental or create client config file)"
+echo ""
+echo ""
+sleep 3
 #########################
 #Do you have permission?#
 #########################
@@ -28,6 +48,7 @@ fi
 #########################
 #The Script##############
 #########################
+echo ""
   read -p "First time Setup? (Y or N) " -n 1 -r
   echo    # (optional) move to a new line
 if [[ $REPLY =~ ^[Yy]$ ]]
@@ -137,6 +158,7 @@ printf '%60s\n' | tr ' ' -
 printf '%60s\n' | tr ' ' - 
 printf '%60s\n' | tr ' ' - 
 fi
+echo ""
 echo "Adobe Update Server Options"
 printf '%60s\n' | tr ' ' - 
 select ausst in fresh_synchronization incremental_syncronization generate_client_configuration_xml
