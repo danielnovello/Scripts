@@ -54,9 +54,11 @@ echo ""
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
   sleep 3
+echo ""  
 # Ask for MDM Server Name
    echo "Hostname of this server (FQDN) : "
    read input_variable
+echo ""   
    echo "You entered: $input_variable"
 printf '%60s\n' | tr ' ' -
 echo "System Information"
@@ -84,16 +86,16 @@ else
 fi
 sleep 3
 printf '%60s\n' | tr ' ' -
-printf '%60s\n' | tr ' ' -
   echo "If No Forward Record Found. or No PTR Record Found. Please Fix and re-run"
   echo "If Forward and PTR Record OK. Continue..."
 printf '%60s\n' | tr ' ' -
-printf '%60s\n' | tr ' ' -
+echo ""
   read -p "Would you like to Continue? (Y or N) " -n 1 -r
   echo    # (optional) move to a new line
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
   sleep 3
+  echo ""
   echo    "Downloading Adobe Update Server Setup Tool for Mac (v4)..."
   sleep 1  
     curl -O https://raw.githubusercontent.com/djquazzi/Scripts/master/AdobeUpdateServerSetupTool.zip
