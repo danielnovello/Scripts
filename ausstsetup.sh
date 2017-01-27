@@ -28,6 +28,11 @@ fi
 #########################
 #The Script##############
 #########################
+  read -p "First time Setup? (Y or N) " -n 1 -r
+  echo    # (optional) move to a new line
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+  sleep 3
 # Ask for MDM Server Name
    echo "Hostname of this server (FQDN) : "
    read input_variable
@@ -97,8 +102,8 @@ then
   printf '%60s\n' | tr ' ' -
   sleep 3
   echo "Copy files to websites directory"
-  sudo cp  AdobeUpdateServerSetupTool /Library/Server/Web/Data/Sites/Adobe/tool/
-  sudo cp  0000_any_80_adobe.conf /Library/Server/Web/Config/apache2/sites/
+  sudo cp AdobeUpdateServerSetupTool /Library/Server/Web/Data/Sites/Adobe/tool/
+  sudo cp 0000_any_1234_adobe.conf /Library/Server/Web/Config/apache2/sites/
   sudo cp HDPIM.dylib /Library/Server/Web/Data/Sites/Adobe/tool/
   sudo cp HUM.dylib /Library/Server/Web/Data/Sites/Adobe/tool/
   sudo cp unar /Library/Server/Web/Data/Sites/Adobe/tool/
@@ -131,6 +136,7 @@ printf '%60s\n' | tr ' ' -
 printf '%60s\n' | tr ' ' - 
 printf '%60s\n' | tr ' ' - 
 printf '%60s\n' | tr ' ' - 
+fi
 echo "Adobe Update Server Options"
 printf '%60s\n' | tr ' ' - 
 select ausst in fresh_synchronization incremental_syncronization generate_client_configuration_xml
