@@ -135,8 +135,8 @@ then
   printf '%60s\n' | tr ' ' -
   sleep 3
   echo "Removing temporary files..."
-  sudo rm  AdobeUpdateServerSetupTool
-  sudo rm 0000_any_80_adobe.conf
+  sudo rm AdobeUpdateServerSetupTool
+  sudo rm 0000_any_1234_adobe.conf
   echo    ""
   echo    "...Done"
   printf '%60s\n' | tr ' ' -
