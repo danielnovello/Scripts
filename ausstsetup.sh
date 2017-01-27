@@ -99,6 +99,9 @@ then
   echo "Copy files to websites directory"
   sudo cp  AdobeUpdateServerSetupTool /Library/Server/Web/Data/Sites/Adobe/tool/
   sudo cp  0000_any_80_adobe.conf /Library/Server/Web/Config/apache2/sites/
+  sudo cp HDPIM.dylib /Library/Server/Web/Data/Sites/Adobe/tool/
+  sudo cp HUM.dylib /Library/Server/Web/Data/Sites/Adobe/tool/
+  sudo cp unar /Library/Server/Web/Data/Sites/Adobe/tool/
   echo    ""
   echo    "...Done"
   printf '%60s\n' | tr ' ' -
