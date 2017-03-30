@@ -177,7 +177,7 @@ do
 			echo "--------------"		
 			;;
 		generate_client_configuration_xml) 
-		    echo "sudo /Library/Server/Web/Data/Sites/Adobe/tool/AdobeUpdateServerSetupTool --root=/Library/Server/Web/Data/Sites/Adobe/updates/Adobe/ --genclientconf=/Library/Server/Web/Data/Sites/Adobe/updates/config/AdobeUpdaterClient --url=http://$ip:1234/Adobe/updates/Adobe"
+		    echo "sudo /Library/Server/Web/Data/Sites/Adobe/tool/AdobeUpdateServerSetupTool --root=/Library/Server/Web/Data/Sites/Adobe/updates/Adobe/ --genclientconf=/Library/Server/Web/Data/Sites/Adobe/updates/config/AdobeUpdaterClient --url=http://$ip:1234/updates/Adobe"
 		    sleep 3
 		    printf '%60s\n' | tr ' ' - 
 		    printf '%60s\n' | tr ' ' - 
