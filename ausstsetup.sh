@@ -191,6 +191,7 @@ do
 		    printf '%60s\n' | tr ' ' - 
 		    sleep 6
 		    printf '%60s\n' | tr ' ' - 
+		    ip=`ipconfig getifaddr en0` ; echo "$ip"
 		    sudo /Library/Server/Web/Data/Sites/Adobe/tool/AdobeUpdateServerSetupTool --root=/Library/Server/Web/Data/Sites/Adobe/updates/Adobe/ --genclientconf=/Library/Server/Web/Data/Sites/Adobe/updates/config/AdobeUpdaterClient --url=http://"$ip":1234/updates/Adobe/	
 			open http://"$ip":1234/updates/Adobe/webfeed/oobe/aam20/mac/updaterfeed.xml
 			open /Library/Server/Web/Data/Sites/Adobe/updates/config/AdobeUpdaterClient	
