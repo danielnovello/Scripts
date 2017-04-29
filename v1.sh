@@ -142,7 +142,7 @@ if [ "$CONT" == "y" ]; then
 read -p "Would You Like to Install Malwarebytes Anti-Malware ? (y/n)?" CONT
 if [ "$CONT" == "y" ]; then
   echo "Installing Malwarebytes Anti-Malware..."
-       curl -O https://downloads.malwarebytes.com/file/mbam_for_mac/
+       curl -O https://data-cdn.mbamupdates.com/web/mbam-mac-1.2.6.730.dmg
   echo "Removing old version of Malwarebytes Anti-Malware..."
        sudo rm -rf /Applications/Malwarebytes\ Anti-Malware.app
        hdiutil attach MBAM-Mac-1.1.3.72.dmg
