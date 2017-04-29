@@ -145,10 +145,10 @@ if [ "$CONT" == "y" ]; then
        curl -O https://data-cdn.mbamupdates.com/web/mbam-mac-1.2.6.730.dmg
   echo "Removing old version of Malwarebytes Anti-Malware..."
        sudo rm -rf /Applications/Malwarebytes\ Anti-Malware.app
-       hdiutil attach MBAM-Mac-1.1.3.72.dmg
+       hdiutil attach mbam-mac-1.2.6.730.dmg
        sudo cp -R /Volumes/Malwarebytes\ Anti-Malware/Malwarebytes\ Anti-Malware.app /Applications/
        hdiutil unmount /Volumes/Malwarebytes\ Anti-Malware/
-       rm MBAM-Mac-1.1.3.72.dmg
+       rm mbam-mac-1.2.6.730.dmg
        echo "Malwarebytes Anti-Malware Installed successfully";
 else
   echo "Ok, next..."
